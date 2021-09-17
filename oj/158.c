@@ -1,8 +1,8 @@
 /*************************************************************************
-	> File Name: 157.c
+	> File Name: 158.c
 	> Author: 任博宇 
 	> Mail: renboyu@hrbeu.edu.cn / renboyu2333@gmail.com
-	> Created Time: Wed Sep 15 14:25:29 2021
+	> Created Time: Thu Sep 16 18:37:54 2021
  ************************************************************************/
 
 #include <stdio.h>
@@ -14,29 +14,25 @@ int main() {
         for (int j = 0; j < i; j++) {
             printf(" ");
         }
-        for (int j = i; j < n; j++) {
-            printf("%c", 'A' + j);
+        printf("%d", n - i);
+        for (int j = ((n - i)<< 1) - 1; j; j--) {
+            printf(" ");
         }
-        for (int j = n - 2; j >= i; j--) {
-            printf("%c", 'A' + j);
-        }
-        
-        i != n && printf("\n");
+        printf("%d\n", n - i);
     }
-
-    for (int i = n - 2; i  >= 0; i--) {
+    for (int i = 0; i < n; i++) {
+        printf(" ");
+    }
+    printf("0\n");
+    for (int i = n - 1; i >= 0; i--) {
         for (int j = 0; j < i; j++) {
             printf(" ");
         }
-        for (int j = i; j < n; j++) {
-            printf("%c", 'A' + j);
+        printf("%d", n - i);
+        for (int j = ((n - i)<< 1) - 1; j; j--) {
+            printf(" ");
         }
-        for (int j = n - 2; j >= i; j--) {
-            printf("%c", 'A' + j);
-        }
-        i != 0 && printf("\n");
-        
+        printf("%d\n", n - i);
     }
-
     return 0;
 }
